@@ -29,8 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            notifyIcon1 = new NotifyIcon(components);
             timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.BalloonTipText = "sss";
+            notifyIcon1.BalloonTipTitle = "aaa";
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
             // 
             // timer1
             // 
@@ -40,9 +49,10 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(431, 211);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "Form1";
             Text = "Form1";
             Paint += Form1_Paint;
@@ -52,5 +62,6 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
+        private NotifyIcon notifyIcon1;
     }
 }
